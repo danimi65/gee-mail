@@ -1,37 +1,108 @@
 <html>
-	<head>
-		<script src="js/mail-generator.js"></script>
-		<link href="css/style.css" rel="stylesheet" media="screen">
-    	<script src="js/mail-controller.js"></script>
-	</head>
-	<body>
-		<div class="container" id="main">
+<head>
+	<script src="js/mail-generator.js"></script>
+	<link href="css/style.css" rel="stylesheet" media="screen">
+	<script>
+		window.onload = function(){
+		        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
+		        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 
-			<header>
-			<a href="google.com" id="button">Goople</a> 
-			<input type="text" name="search" placeholder="Search..">
-			</header>
 
-			<section>
-				<a href="google" id="ComposeButton">Compose</a>
+		        var counter = 0;
 
-			</section>
-		</div>
 
-<ul class="navigation">
-	<li class="active">
-		<a href="#">Inbox</a>
-	</li>
-	<li>
-		<a href="#">Important</a>
-	</li>
-	<li>
-		<a href="#">Drafts</a>
-	</li>
-	<li>
-		<a href="#">Trash</a>
-	</li>
-	
-</ul>
-	</body>
-</html>
+		        function geemailStuff (){
+
+		        	console.log(counter);
+		        	// for(var i=0; i < window.geemails.length; i++){
+
+		        		var subjectBox= document.createElement('div');
+		        		subjectBox.className = "mahSubjects";
+		        		subjectBox.innerHTML = window.geemails[counter].subject;
+		        		main.appendChild(subjectBox);
+
+		        		var dateBox= document.createElement('div');
+		        		dateBox.className = "mahDates";
+		        		dateBox.innerHTML= window.geemails[counter].date;
+		        		main.appendChild(dateBox);
+
+		        		var senderBox= document.createElement('div');
+		        		senderBox.className = "theSenders";
+		        		senderBox.innerHTML = window.geemails[counter].sender;
+		        		main.appendChild(senderBox);
+
+		        		var messageBox = document.createElement('div');
+		        		messageBox.className= "messages";
+		        		messageBox.innerHTML= window.geemails[counter].body;
+		        		main.appendChild(messageBox);
+
+		        	// } 
+
+		        	counter++;
+		        }	
+
+		        // geemailStuff();
+
+
+
+
+
+
+		        		function reset (){
+		        		 setInterval(geemailStuff, 3000); 
+		        		}
+		        		reset();
+
+
+		        	function frame() {
+		        	if (counter > 9) {
+		        		clearInterval(reset());
+		        	} else {
+		        		counter++; 
+		        	}
+		        }
+		        frame();
+
+
+
+
+
+
+		        		console.log(window.geemails);
+		        	};
+		        </script>
+		    </head>
+		    <body>
+		    	<div class="container" id="main">
+
+		    		<header>
+		    			<a href="#" id="button">Goople</a> 
+		    			<input type="text" name="search" placeholder="Search..">
+		    		</header>
+
+		    		<section>
+		    			<a href="#" id="ComposeButton">Compose</a>
+
+		    		</section>
+
+
+		    		<ul class="navigation">
+		    			<li class="active">
+		    				<a href="#">Inbox</a>
+		    			</li>
+		    			<li>
+		    				<a href="#">Important</a>
+		    			</li>
+		    			<li>
+		    				<a href="#">Drafts</a>
+		    			</li>
+		    			<li>
+		    				<a href="#">Trash</a>
+		    			</li>
+
+		    		</ul>
+		    	</div>
+
+
+		    </body>
+		    </html>
