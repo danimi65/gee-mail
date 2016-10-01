@@ -2,6 +2,7 @@
 <head>
 	<script src="js/mail-generator.js"></script>
 	<link href="css/style.css" rel="stylesheet" media="screen">
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Homemade+Apple|Pacifico" rel="stylesheet">
 	<script>
 		window.onload = function(){
 		        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
@@ -16,7 +17,7 @@
 
 		        		var mailBox = document.createElement('div');
 		        		mailBox.className = "allMahMail";
-		        		main.appendChild(mailBox);
+		        		mailContainer.appendChild(mailBox);
 		        		mailBox.addEventListener('click', theList);
 
 		        		var subjectBox= document.createElement('div');
@@ -106,7 +107,7 @@
 
 		        		var newMailBox = document.createElement('div');
 		        		newMailBox.className = "allMahNewMail";
-		        		main.appendChild(newMailBox);
+		        		mailContainer.appendChild(newMailBox);
 		        		newMailBox.addEventListener('click', theNewList);
 		        		
 		        		var newSubjectBox= document.createElement('div');
@@ -129,6 +130,8 @@
 		        		newMessageBox.innerHTML= newMail.body;
 		        		newMessageBox.style.display= 'none';
 		        		newMailBox.appendChild(newMessageBox);
+
+		        		mailContainer.insertBefore(newMailBox, mailContainer.childNodes[0]);
 
 		        	} 
 		        	/*test();*/
@@ -195,16 +198,23 @@
 			<div class="container" id="main">
 
 				<header>
-					<a href="#" id="button">Goople</a> 
-					<input type="text" name="search" placeholder="Search..">
+					<marquee behavior="standard" direction="right"><img id="pandaGif" src="assets/redPanda.gif" alt="panda"></marquee>
+					<div id="goople">Goople </div>
+
+
+					<div id="searchBar"><input type="text" name= "search" placeholder="Search.."></div>
 				</header>
+
+				<div id="sidebar">
+					
+				
 
 				<section>
 					<a href="#" id="ComposeButton">Compose</a>
 
 				</section>
 
-
+				
 
 
 
@@ -213,8 +223,36 @@
 
 
 
+				<div id= "trash"> 
+
+				
+
+				<img id="trashImg" src="assets/trashCan.jpg" alt="trash can">
+
+				<div id= "trashWord">Trash</div>
 
 
+				</div>
+
+				<div id= "sentMail">
+				<img id="sentMailImg" src="assets/sentMail.jpg" alt="sent Mail">
+				<div id="sentMailword">Sent Mail</div>
+
+				</div>
+
+				<div id= "draftMail">
+				<img id="draftMailImg" src="assets/drafts.jpg" alt="drafts Mail">
+				<div id="draftMailword">Drafts</div>
+
+				</div>
+
+
+				</div>
+
+
+
+				<div id= "mailContainer"></div>
+				
 
 <!-- 
 				<ul class="navigation">
@@ -233,6 +271,7 @@
 
 				</ul> -->
 			</div>
+		
 
 
 		</body>
