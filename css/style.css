@@ -1,13 +1,89 @@
-#button{
+#goople{
 	background-color: white;
 	border: none;
 	color:#708090;
 	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
-	font-size: 30px;
+	display: center;
+	font-size: 50px;
+	margin-top: 19px;
+	font-family: 'Homemade Apple', cursive;
 }
+
+#mailGif{
+	height: 100px;
+	width: 100px;
+	margin-top: 10px;
+
+}
+
+#searchBar{
+	display: center;
+	text-align: center;
+	padding: 10px 20px;
+	margin-bottom: 22px;
+}
+
+#count{
+	padding: 10px 20px;
+	color: #708090;
+	font-size: 18px;
+}
+
+#sentMail{
+	padding: 2px 20px;
+	color: #708090;
+	font-size: 18px;
+}
+
+#trash{
+	padding: 2px 20px;
+	color: #708090;
+	font-size: 18px;
+}
+
+#trashWord{
+	margin-left:19px;
+	margin-top:-5px;
+}
+
+#trashImg{
+	float: left;
+	margin-top: -8px;
+	margin-left: -16px;
+	height: 25px;
+	width: 30px;
+}
+
+#sentMailImg{
+	float: left;
+	margin-top: -2px;
+	margin-left: -16px;
+	height: 25px;
+	width: 30px;
+}
+
+#draftMailImg{
+	float: left;
+	margin-top: -2px;
+	margin-left: -16px;
+	height: 25px;
+	width: 30px;
+}
+
+#draftMailWord{
+	margin-left:19px;
+	margin-top:1px;
+
+}
+
+#draftMail{
+	padding: 2px 20px;
+	color: #708090;
+	font-size: 18px;
+}
+
  
 #ComposeButton{
 	background-color:#708090 ;
@@ -27,11 +103,14 @@
 	border-radius: 4px;
 	font-size: 16px;
 	background-color: white;
-	background-image: url ('searchicon.png');
+	/*background-image: url ('searchicon.png');*/
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
 	padding: 12px 20px 12px 40px;
 }
+
+
+
 
 .mahDates{
 	text-align: right;
@@ -41,6 +120,7 @@
 	border-top: 1px solid black;
 	background-color: #708090;
 	color: white;
+
 }
 
 .mahNewDates{
@@ -58,6 +138,30 @@
 }
 
 
-.newMessages{
+.theSenders{
+	padding: 5px 5px;
+}
+
+
+#sideBar{
+	float: left;
+	width: 15%;
+	height: 50%
+}
+
+
+#mailContainer{
+	float: right;
+	width: 80%;
+	height: 100%;
 	
+}
+
+
+
+#pandaGif{
+	height: 30%;
+	width: 30%;
+	margin-top: 10px;
+
 }
