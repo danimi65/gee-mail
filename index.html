@@ -7,77 +7,136 @@
 		        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
 		        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 
+					
 
-		        // var counter = 0;
-		        
+		        	var pageLoad= window.geemails;
+		     
+		        	for(var i=0; i < pageLoad.length; i++){
 
 
-		        function geemailStuff (){
-
-		        	//console.log(counter);
-		        	for(var i=0; i < window.geemails.length; i++){
+		        		var mailBox = document.createElement('div');
+		        		mailBox.className = "allMahMail";
+		        		main.appendChild(mailBox);
+		        		mailBox.addEventListener('click', theList);
 
 		        		var subjectBox= document.createElement('div');
 		        		subjectBox.className = "mahSubjects";
-		        		subjectBox.innerHTML = window.geemails[i].subject;
-		        		main.appendChild(subjectBox);
+		        		subjectBox.innerHTML = pageLoad[i].subject;
+		        		mailBox.appendChild(subjectBox);
 
 		        		var dateBox= document.createElement('div');
 		        		dateBox.className = "mahDates";
-		        		dateBox.innerHTML= window.geemails[i].date;
-		        		main.appendChild(dateBox);
+		        		dateBox.innerHTML= pageLoad[i].date;
+		        		mailBox.appendChild(dateBox);
 
 		        		var senderBox= document.createElement('div');
 		        		senderBox.className = "theSenders";
-		        		senderBox.innerHTML = window.geemails[i].sender;
-		        		main.appendChild(senderBox);
+		        		senderBox.innerHTML = pageLoad[i].sender;
+		        		mailBox.appendChild(senderBox);
 
 		        		var messageBox = document.createElement('div');
 		        		messageBox.className= "messages";
-		        		messageBox.innerHTML= window.geemails[i].body;
-		        		main.appendChild(messageBox);
+		        		messageBox.innerHTML= pageLoad[i].body;
+		        		messageBox.style.display= 'none';
+		        		mailBox.appendChild(messageBox);
 
-		        	} 
+
+		        	}
 
 
-		        }
 
-		        	//counter++; 
-		      //  }	
+		       
+					/*var mailPageCount= geemails.length;
+					console.log(mailPageCount);
+*/
+		        
 
-		      geemailStuff();
+		    	
 
-		  
+		    
+
+
+		     /*  var counter = geemails.length;*/
+		        /*count.appendChild(counter);*/
+
+		       /* console.log(counter);*/
+
+		     
+
+
+
+
+		    /*  var bodyList= document.getElementsByClassName('.body');
+		      for(var i=0; i< bodyList.length; i++){
+		      	bodyList[i].addEventListener('click', theList);
+		      }*/
+
+		      	function theList(){
+		      		var showMessage= this.querySelectorAll('.messages')[0];
+		      		console.log(this);
+		      		if(showMessage.style.display === 'none'){
+		      			showMessage.style.display = 'block'; 
+		      		} else {
+		      			showMessage.style.display = 'none';
+		      		}
+
+		      	} 
+
+		      	  count.innerHTML= "Inbox " + i;
+
+		      
 
 
 
 		      function test(){
 		        		//console.log(window.getNewMessage);
+
+
+		        		/*geemails.length++;*/
+
+		        		/*var newMailCount= mailPageCount++;*/
+
+		        		i++;
+
+		        		count.innerHTML= "Inbox " + i;
+
+
+
 		        		var newMail = window.getNewMessage();
+
+		        		var newMailBox = document.createElement('div');
+		        		newMailBox.className = "allMahNewMail";
+		        		main.appendChild(newMailBox);
+		        		newMailBox.addEventListener('click', theNewList);
 		        		
 		        		var newSubjectBox= document.createElement('div');
 		        		newSubjectBox.className = "mahNewSubjects";
 		        		newSubjectBox.innerHTML = newMail.subject;
-		        		main.appendChild(newSubjectBox);
+		        		newMailBox.appendChild(newSubjectBox);
 
 		        		var newDateBox= document.createElement('div');
 		        		newDateBox.className = "mahNewDates";
 		        		newDateBox.innerHTML= newMail.date;
-		        		main.appendChild(newDateBox);
+		        		newMailBox.appendChild(newDateBox);
 
 		        		var newSenderBox= document.createElement('div');
 		        		newSenderBox.className = "theNewSenders";
 		        		newSenderBox.innerHTML = newMail.sender;
-		        		main.appendChild(newSenderBox);
+		        		newMailBox.appendChild(newSenderBox);
 
 		        		var newMessageBox = document.createElement('div');
 		        		newMessageBox.className= "newMessages";
 		        		newMessageBox.innerHTML= newMail.body;
-		        		main.appendChild(newMessageBox);
+		        		newMessageBox.style.display= 'none';
+		        		newMailBox.appendChild(newMessageBox);
 
 		        	} 
-		        	test();
+		        	/*test();*/
 
+
+
+
+		    
 		        	// var newMail = {
 		        	// 	getNewMessage(){
 		        	// 		return this;
@@ -85,6 +144,26 @@
 		        	// }
 
 		        	setInterval(test, 3000);
+
+		        	function theNewList(){
+		      		var showMessage= this.querySelectorAll('.newMessages')[0];
+		      		console.log(this);
+		      		if(showMessage.style.display === 'none'){
+		      			showMessage.style.display = 'block'; 
+		      		} else {
+		      			showMessage.style.display = 'none';
+		      		}
+
+		      	} 
+
+
+
+		        	
+
+
+
+
+		        
 
 
 
@@ -126,9 +205,21 @@
 				</section>
 
 
+
+
+
+
+				<div id= "count"></div>
+
+
+
+
+
+
+<!-- 
 				<ul class="navigation">
 					<li class="active">
-						<a href="#">Inbox</a>
+						<a href="#">Inbox  </a>
 					</li>
 					<li>
 						<a href="#">Important</a>
@@ -140,7 +231,7 @@
 						<a href="#">Trash</a>
 					</li>
 
-				</ul>
+				</ul> -->
 			</div>
 
 
