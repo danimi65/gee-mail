@@ -8,61 +8,61 @@
 		        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
 		        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 
-					
-
-		        	var pageLoad= window.geemails;
-		     
-		        	for(var i=0; i < pageLoad.length; i++){
 
 
-		        		var mailBox = document.createElement('div');
-		        		mailBox.className = "allMahMail";
-		        		mailContainer.appendChild(mailBox);
-		        		mailBox.addEventListener('click', theList);
+		        var pageLoad= window.geemails;
 
-		        		var subjectBox= document.createElement('div');
-		        		subjectBox.className = "mahSubjects";
-		        		subjectBox.innerHTML = pageLoad[i].subject;
-		        		mailBox.appendChild(subjectBox);
-
-		        		var dateBox= document.createElement('div');
-		        		dateBox.className = "mahDates";
-		        		dateBox.innerHTML= pageLoad[i].date;
-		        		mailBox.appendChild(dateBox);
-
-		        		var senderBox= document.createElement('div');
-		        		senderBox.className = "theSenders";
-		        		senderBox.innerHTML = pageLoad[i].sender;
-		        		mailBox.appendChild(senderBox);
-
-		        		var messageBox = document.createElement('div');
-		        		messageBox.className= "messages";
-		        		messageBox.innerHTML= pageLoad[i].body;
-		        		messageBox.style.display= 'none';
-		        		mailBox.appendChild(messageBox);
+		        for(var i=0; i < pageLoad.length; i++){
 
 
-		        	}
+		        	var mailBox = document.createElement('div');
+		        	mailBox.className = "allMahMail";
+		        	mailContainer.appendChild(mailBox);
+		        	mailBox.addEventListener('click', theList);
+
+		        	var subjectBox= document.createElement('div');
+		        	subjectBox.className = "mahSubjects";
+		        	subjectBox.innerHTML = pageLoad[i].subject;
+		        	mailBox.appendChild(subjectBox);
+
+		        	var dateBox= document.createElement('div');
+		        	dateBox.className = "mahDates";
+		        	dateBox.innerHTML= pageLoad[i].date;
+		        	mailBox.appendChild(dateBox);
+
+		        	var senderBox= document.createElement('div');
+		        	senderBox.className = "theSenders";
+		        	senderBox.innerHTML = pageLoad[i].sender;
+		        	mailBox.appendChild(senderBox);
+
+		        	var messageBox = document.createElement('div');
+		        	messageBox.className= "messages";
+		        	messageBox.innerHTML= pageLoad[i].body;
+		        	messageBox.style.display= 'none';
+		        	mailBox.appendChild(messageBox);
+
+
+		        }
 
 
 
-		       
+
 					/*var mailPageCount= geemails.length;
 					console.log(mailPageCount);
-*/
-		        
-
-		    	
-
-		    
+					*/
 
 
-		     /*  var counter = geemails.length;*/
-		        /*count.appendChild(counter);*/
 
-		       /* console.log(counter);*/
 
-		     
+
+
+
+					/*  var counter = geemails.length;*/
+					/*count.appendChild(counter);*/
+
+					/* console.log(counter);*/
+
+
 
 
 
@@ -72,18 +72,18 @@
 		      	bodyList[i].addEventListener('click', theList);
 		      }*/
 
-		      	function theList(){
-		      		var showMessage= this.querySelectorAll('.messages')[0];
-		      		console.log(this);
-		      		if(showMessage.style.display === 'none'){
-		      			showMessage.style.display = 'block'; 
-		      		} else {
-		      			showMessage.style.display = 'none';
-		      		}
+		      function theList(){
+		      	var showMessage= this.querySelectorAll('.messages')[0];
+		      	console.log(this);
+		      	if(showMessage.style.display === 'none'){
+		      		showMessage.style.display = 'block'; 
+		      	} else {
+		      		showMessage.style.display = 'none';
+		      	}
 
-		      	} 
+		      } 
 
-		      	  count.innerHTML= "Inbox " + i;
+		      count.innerHTML= "Inbox " + i;
 
 		      
 
@@ -139,7 +139,7 @@
 
 
 
-		    
+
 		        	// var newMail = {
 		        	// 	getNewMessage(){
 		        	// 		return this;
@@ -149,15 +149,15 @@
 		        	setInterval(test, 3000);
 
 		        	function theNewList(){
-		      		var showMessage= this.querySelectorAll('.newMessages')[0];
-		      		console.log(this);
-		      		if(showMessage.style.display === 'none'){
-		      			showMessage.style.display = 'block'; 
-		      		} else {
-		      			showMessage.style.display = 'none';
-		      		}
+		        		var showMessage= this.querySelectorAll('.newMessages')[0];
+		        		console.log(this);
+		        		if(showMessage.style.display === 'none'){
+		        			showMessage.style.display = 'block'; 
+		        		} else {
+		        			showMessage.style.display = 'none';
+		        		}
 
-		      	} 
+		        	} 
 
 
 
@@ -166,7 +166,7 @@
 
 
 
-		        
+
 
 
 
@@ -185,7 +185,7 @@
 
 
 
-
+	
 
 
 
@@ -202,74 +202,90 @@
 					<div id="goople">Goople </div>
 
 
-					<div id="searchBar"><input type="text" name= "search" placeholder="Search.."> <a href="http://www.google.com" id="searchIcon"><img id="searchIcon" src="assets/searchIcon.jpg" alt="search icon"></a></div>
+					<div id="search">
+					<form id="searchBar" method="get" action="http://www.google.com">
+							<input type="text" class="textInput"  name="q" size="21" maxlength="120"> <input type="submit" value="search" class="searchButton">
+						</form>
+					</div>
+
+
+
+					<!-- <div id="searchBar"><input type="text" name= "search" placeholder="Search.."> <a href="http://www.google.com" id="searchIcon"><img id="searchIcon" src="assets/searchIcon.jpg" alt="search icon"></a></div> -->
+
+
 				</header>
 
+
+
 				<div id="sidebar">
+
+
+				
 					
-				
 
-				<section>
-					<div id="composeSection"><a href="#" id="ComposeButton">Compose</a></div>
 
-				</section>
+					<section>
+						<div id="composeSection"><a href="#" id="ComposeButton">Compose</a></div>
 
-				
+					</section>
 
 
 
 
-				<div id= "count"></div>
+
+
+					<div id= "count"></div>
 
 
 
-				<div id= "trash"> 
-
-				
-
-				<img id="trashImg" src="assets/trashCan.jpg" alt="trash can">
-
-				<div id= "trashWord">Trash</div>
-
-
-				</div>
-
-				<div id= "sentMail">
-				<img id="sentMailImg" src="assets/sentMail.jpg" alt="sent Mail">
-				<div id="sentMailword">Sent Mail</div>
-
-				</div>
-
-				<div id= "draftMail">
-				<img id="draftMailImg" src="assets/drafts.jpg" alt="drafts Mail">
-				<div id="draftMailword">Drafts</div>
-
-				</div>
-
-				<div id="friendsList">
-				<img id="phone" src="assets/phone.jpg" alt="phone"> Contact List
-				
-				<ul id="Contacts" style="list-style-type:none">
-				<li>Blake Bear <img id="bear" src="assets/rilakkuma.jpg" alt="bear"> </li>
-				<li>Leo Lion <img id="lion" src="assets/lion.jpg" alt="lion"> </li>
-				<li>Betsy Bunny <img id="bunny" src="assets/bunny.jpg" alt="bunny"></li>
-				<li>Emily Elephant <img id="elephant" src="assets/elephant.jpg" alt="elephant"></li>
-				<li>Chad Cat <img id="cat" src="assets/cat.jpg" alt="cat"></li>
-				<li>Dean Dog <img id="dog" src="assets/corgi.jpg" alt="dog"></li>
-				<li>Sally Snake <img id="snake" src="assets/snake.jpg" alt="snake"></li>
-				<li>Mimi Monkey <img id="monkey" src="assets/monkey.jpg" alt="monkey"></li>
-				<li>George Giraffe <img id="bunny" src="assets/giraffe.jpg" alt="giraffe"></li>
-
-					
-				</ul></div>
-
-
-				</div>
+					<div id= "trash"> 
 
 
 
-				<div id= "mailContainer"></div>
-				
+						<img id="trashImg" src="assets/trashCan.jpg" alt="trash can">
+
+						<div id= "trashWord">Trash</div>
+
+
+					</div>
+
+					<div id= "sentMail">
+						<img id="sentMailImg" src="assets/sentMail.jpg" alt="sent Mail">
+						<div id="sentMailword">Sent Mail</div>
+
+					</div>
+
+					<div id= "draftMail">
+						<img id="draftMailImg" src="assets/drafts.jpg" alt="drafts Mail">
+						<div id="draftMailword">Drafts</div>
+
+					</div>
+
+					<div id="friendsList">
+						<img id="phone" src="assets/phone.jpg" alt="phone"> Contact List
+
+						<ul id="Contacts" style="list-style-type:none">
+							<span id="blakeBear" title= "Give me some honey please!"><li>Blake Bear <img id="bear" src="assets/rilakkuma.jpg" alt="bear">  </li></span>
+							
+							<span id= "leoLion" title="roar moar!"><li>Leo Lion <img id="lion" src="assets/lion.jpg" alt="lion"> </li></span>
+							<li>Betsy Bunny <img id="bunny" src="assets/bunny.jpg" alt="bunny"></li>
+							<li>Emily Elephant <img id="elephant" src="assets/elephant.jpg" alt="elephant"></li>
+							<li>Chad Cat <img id="cat" src="assets/cat.jpg" alt="cat"></li>
+							<li>Dean Dog <img id="dog" src="assets/corgi.jpg" alt="dog"></li>
+							<li>Sally Snake <img id="snake" src="assets/snake.jpg" alt="snake"></li>
+							<li>Mimi Monkey <img id="monkey" src="assets/monkey.jpg" alt="monkey"></li>
+							<li>George Giraffe <img id="bunny" src="assets/giraffe.jpg" alt="giraffe"></li>
+
+
+						</ul></div>
+
+
+					</div>
+
+
+
+					<div id= "mailContainer"></div>
+
 
 <!-- 
 				<ul class="navigation">
@@ -288,7 +304,7 @@
 
 				</ul> -->
 			</div>
-		
+
 
 
 		</body>
