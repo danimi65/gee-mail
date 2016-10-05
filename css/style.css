@@ -12,17 +12,22 @@
 }
 
 
-#searchBar{
+#search{
 	display: center;
 	text-align: center;
 	padding: 10px 20px;
 	margin-bottom: 22px;
 }
 
-#searchIcon{
+.searchButton{
 	height: 25px;
-	width: 22px;
+	width: 60px;
+	background-color: #708090;
+	color: white;
+	border-radius: 10px;
 	margin-bottom: -6px;
+	font-family: 'Nunito', sans-serif;
+
 }
 
 #count{
@@ -146,31 +151,32 @@
 	color: white;
 	padding-right: 40px;
 	font-family: 'Nunito', sans-serif;
+	font-size: 15px;
 	
 }
 
 
 .mahSubjects{
-	border-top: 1px solid black;
+	border-top: 1px solid white;
 	background-color: #708090;
 	color: white;
 	padding-left: 40px;
 	padding-top: 23px;
 	font-family: 'Nunito', sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	
 	
 
 }
 
 .mahNewSubjects{
-	border-top: 1px solid black;
+	border-top: 1px solid white;
 	background-color: #708090;
 	color: white;
 	padding-top: 23px;
 	padding-left: 40px;
 	font-family: 'Nunito', sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	
 }
 
@@ -181,6 +187,7 @@
 	color: white;
 	padding-right: 40px;
 	font-family: 'Nunito', sans-serif;
+	font-size: 15px;
 	
 }
 
@@ -189,9 +196,10 @@
 .messages{
 	display: block;
 	border-bottom: 1px solid black;
-	background-color: #708090;
-	color: white;
+	background-color: white;
+	color: #708090;
 	padding-left: 20x;
+	text-align: center;
 	
 }
 
@@ -199,9 +207,10 @@
 
 	display: block;
 	border-bottom: 1px solid black;
-	background-color: #708090;
-	color: white;
+	background-color: white;
+	color: #708090;
 	padding-left: 20x;
+	text-align: center;
 	
 
 }
@@ -248,6 +257,23 @@
 	
 }
 
+
+
+
+#blakeBear:hover{
+	display: block;
+	background-color: #708090;
+	color: white;
+
+}
+
+#leoLion:hover{
+	display: block;
+	background-color: #708090;
+	color: white;
+
+}
+
 #bunny{
 	height: 22px;
 	width: 23px;
@@ -265,6 +291,8 @@
 	width: 22px;
 	
 }
+
+
 
 #lion{
 	height: 19px;
