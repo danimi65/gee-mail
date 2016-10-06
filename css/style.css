@@ -262,14 +262,63 @@
 
 #blakeBear:hover{
 	display: block;
-	background-color: #708090;
+	background-color:#FFD700;
 	color: white;
 
 }
 
 #leoLion:hover{
 	display: block;
-	background-color: #708090;
+	background-color: #B22222;
+	color: white;
+
+}
+
+#betsyBunny:hover{
+	display: block;
+	background-color: #FFC0CB;
+	color: white;
+
+}
+
+
+#emilyElephant:hover{
+	display: block;
+	background-color:#6495ED;
+	color: white;
+
+}
+
+#chadCat:hover{
+	display: block;
+	background-color: #C0ECB2;
+	color: white;
+
+}
+
+#deanDog:hover{
+	display: block;
+	background-color: #625CC0;
+	color: white;
+
+}
+
+#sallySnake:hover{
+	display: block;
+	background-color: #20B2AA;
+	color: white;
+
+}
+
+#mimiMonkey:hover{
+	display: block;
+	background-color: #DB7093;
+	color: white;
+}
+
+#georgeGiraffe:hover{
+	display: block;
+	background-color: #FFA500;
 	color: white;
 
 }
